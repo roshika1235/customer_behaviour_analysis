@@ -160,35 +160,42 @@ The cleaned dataset was loaded into PostgreSQL, where SQL queries were written t
 
 ## Power BI Dashboard
 
-An interactive Power BI dashboard was developed to visualize customer behavior.
+An interactive Power BI dashboard was developed to visualize customer purchasing behavior and business performance using key metrics and charts.
 
 ### Dashboard Features
 
-- Total Customers
-- Average Purchase Amount
-- Average Review Rating
-- Discounted Purchases
-- Revenue by Category
-- Revenue by Gender
-- Revenue by Shipping Type
-- Subscription Status Distribution
-- Product Purchase Treemap
-- Interactive Filters and Visualizations
+- **KPI Cards**
+  - Total Customers
+  - Average Purchase Amount
+  - Average Review Rating
+  - Total Discounted Purchases
 
----
+- **Revenue Analysis**
+  - Total Revenue by Product Category
+  - Total Revenue by Gender
 
-## Key Performance Insights / Business Insights
+- **Customer Analysis**
+  - Customer Distribution by Subscription Status
+  - Customer Distribution by Shipping Type
 
-- Clothing generated the highest revenue among all product categories.
-- Average purchase amount remained consistent across customer segments.
-- Female and male customers contributed nearly equal revenue.
-- A significant percentage of customers used discounts while shopping.
-- Subscription status influenced customer purchasing behavior.
-- Certain products consistently received higher purchase counts.
-- Shipping preferences varied across customer groups.
-- Customer review ratings remained consistently high, indicating overall customer satisfaction.
+- **Product Analysis**
+  - Product Purchase Distribution using a Treemap
+  - Most Purchased Products within Each Category
 
----
+### Dashboard Insights
+
+- Clothing contributes the highest overall revenue among all product categories.
+- Male customers generate higher total revenue than female customers.
+- The average purchase amount is **\$59.76**.
+- The average customer review rating is **3.75**.
+- The dataset contains **3.9K customers**, with approximately **2K discounted purchases**.
+- Most customers are **non-subscribers**, accounting for nearly **73%** of the customer base.
+- Shipping preferences are fairly balanced across all shipping methods.
+- The treemap highlights the most frequently purchased products within each product category.
+
+### Dashboard Preview
+
+![Customer Behaviour Dashboard](images/dashboard.png)
 
 ## Technologies Used
 
