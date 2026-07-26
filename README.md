@@ -195,7 +195,7 @@ An interactive Power BI dashboard was developed to visualize customer purchasing
 
 ### Dashboard Preview
 
-![Customer Behaviour Dashboard](images/dashboard.png)
+![Customer Behaviour Dashboard](images/Screenshot%202026-07-26%20144115.png)
 
 ## Technologies Used
 
@@ -227,4 +227,7 @@ customer_behaviour_analysis/
 
 ## Author
 
-**Roshika**
+**Roshika Challa**
+
+- **LinkedIn:** [Roshika Challa](https://www.linkedin.com/in/roshika-challa-307575259-bvrit-hyderabad-college-of-engineering-for-women/)
+- **GitHub:** [roshika1235](https://github.com/roshika1235)
