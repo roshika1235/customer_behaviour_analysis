@@ -39,7 +39,7 @@ The features are grouped as follows:
 
 ## Exploratory Data Analysis Using Python
 
-Exploratory Data Analysis (EDA) was performed using **Python** to understand the dataset, clean the data, engineer new features, and prepare it for PostgreSQL and Power BI analysis.
+Exploratory Data Analysis (EDA) was performed using **Python** to clean, transform, and prepare the dataset for PostgreSQL and Power BI.
 
 ### Libraries Used
 
@@ -50,74 +50,51 @@ Exploratory Data Analysis (EDA) was performed using **Python** to understand the
 
 - Inspected the dataset structure and verified data types.
 - Checked for missing values across all columns.
-![Missing Values Analysis](images/Screenshot%202026-07-26%20154659.png)
-- Replaced missing values in the **Review Rating** column with the **median review rating of the corresponding product category**.
+
+- Replaced missing values in the **Review Rating** column using the **median review rating of the corresponding product category**.
+
+![Review Rating Cleaning](images/Screenshot%202026-07-26%20154726.png)
+
 - Standardized column names by:
   - Converting all column names to lowercase.
-  - Replacing spaces with underscores for consistency.
+  - Replacing spaces with underscores.
+
+![Cleaned Column Names](images/Screenshot%202026-07-26%20154740.png)
+
 - Removed duplicate/redundant columns.
 - Dropped the **promo_code_used** column since it contained the same information as **discount_applied**.
 
 ### Feature Engineering
 
-#### Age Group Creation
+- Created a new **age_group** column by categorizing customers into:
+  - Young Adult
+  - Adult
+  - Middle Aged
+  - Aged
 
-Created a new **age_group** column by categorizing customers into:
+- Created a new **purchases_frequency_days** column by converting categorical purchase frequencies into numerical values (days).
 
-- Young Adult
-- Adult
-- Middle Aged
-- Aged
+Examples:
+- Weekly → 7
+- Bi-Weekly → 14
+- Fortnightly → 14
+- Monthly → 30
+- Quarterly → 90
+- Annually → 365
 
-#### Purchase Frequency Transformation
-
-Converted the categorical **frequency_of_purchases** column into a numerical feature named **purchases_frequency_days**.
-
-Example mapping:
-
-| Original Value | Days |
-|---------------|-----:|
-| Weekly | 7 |
-| Bi-Weekly | 14 |
-| Fortnightly | 14 |
-| Monthly | 30 |
-| Quarterly | 90 |
-| Every 3 Months | 90 |
-| Annually | 365 |
-
-### Data Validation
-
-- Verified the transformed columns.
-- Reviewed the final dataset structure after preprocessing.
+![Feature Engineering](images/Screenshot%202026-07-26%20154749.png)
 
 ### PostgreSQL Integration
 
-After preprocessing, the required packages were installed:
+Installed the required packages:
 
 ```bash
 pip install psycopg2-binary sqlalchemy
 ```
 
-The cleaned dataset was then:
+Connected Python to PostgreSQL using **SQLAlchemy** and successfully loaded the cleaned dataset into the database.
 
-- Connected to PostgreSQL using SQLAlchemy.
-- Loaded into a PostgreSQL database.
-- Prepared for SQL-based business analysis and Power BI visualization.
-
-### Analysis Performed
-
-- Dataset overview
-- Missing value analysis
-- Data type validation
-- Summary statistics
-- Distribution of purchase amounts
-- Customer age distribution
-- Gender distribution
-- Product category analysis
-- Correlation analysis
-- Purchase trend visualization
-
----
+![Data Loaded into PostgreSQL](images/Screenshot%202026-07-26%20154801.png)
 
 ## Data Analysis Using PostgreSQL
 
