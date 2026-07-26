@@ -50,6 +50,7 @@ Exploratory Data Analysis (EDA) was performed using **Python** to understand the
 
 - Inspected the dataset structure and verified data types.
 - Checked for missing values across all columns.
+![Missing Values Analysis](images/Screenshot%202026-07-26%20154659.png)
 - Replaced missing values in the **Review Rating** column with the **median review rating of the corresponding product category**.
 - Standardized column names by:
   - Converting all column names to lowercase.
